@@ -31,7 +31,6 @@ sudo docker build -t spotify-browser-token-server .
 ## Run Docker Container
 
 ```
-sudo docker rm -f spotify-browser-token-server
 sudo docker run -dit --restart='always' \
 --user pptruser \
 --name 'spotify-browser-token-server' \
