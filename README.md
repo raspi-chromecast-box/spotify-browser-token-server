@@ -38,3 +38,9 @@ sudo docker run -dit --restart='always' \
 -p 9898:9898 \
 spotify-browser-token-server
 ```
+
+## Refresh Token
+
+```
+curl http://127.0.0.1:9898/refresh
+```
