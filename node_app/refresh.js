@@ -20,7 +20,10 @@ function are_cookies_still_valid() {
 function fresh_login_and_get_token_info() {
 	return new Promise( async ( resolve , reject ) => {
 		try {
-			const browser = await puppeteer.launch( { headless: true } );
+			const browser = await puppeteer.launch({
+				headless: true ,
+				args: [ '--disable-dev-shm-usage' , '--no-sandbox' ] ,
+			});
 			const page = await browser.newPage();
 			await page.setViewport( { width: 1200 , height: 720 } )
 			await page.goto( "https://accounts.spotify.com/en/login?continue=https:%2F%2Fopen.spotify.com%2F" , { waitUntil: "networkidle0" } );
@@ -55,7 +58,10 @@ function fresh_login_and_get_token_info() {
 function cookie_login_and_get_token_info() {
 	return new Promise( async ( resolve , reject ) => {
 		try {
-			const browser = await puppeteer.launch( { headless: true } );
+			const browser = await puppeteer.launch({
+				headless: true ,
+				args: [ '--disable-dev-shm-usage' , '--no-sandbox' ] ,
+			});
 			const page = await browser.newPage();
 			await page.setViewport( { width: 1200 , height: 720 } )
 			for ( let cookie of db.self[ "cookies" ] ) {
