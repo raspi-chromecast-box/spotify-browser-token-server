@@ -2,18 +2,18 @@
 
 ## Spotify seems to 'know' via the reCAPTCHA service, if you try to login via Docker , so just generate cookies
 
-## On Normal 'Non-Docker' Computer , Run
+## 1.) On Normal 'Non-Docker' Computer , Run
 
 ```
 node generateConfigFileWithLoginCookies.js
 ```
 
-## Copy JSON
+## 2.) Copy JSON
 ```
 cat spotify_browser_token_server.json
 ```
 
-## On Host Docker Machine ( raspberry pi ) , paste JSON into file
+## 3.) On Host Docker Machine ( raspberry pi ) , paste JSON into file
 ```
 nano  ~/.config/personal/spotify_browser_token_server.json
 ```
@@ -22,13 +22,13 @@ nano  ~/.config/personal/spotify_browser_token_server.json
 chmod 777 ~/.config/personal/spotify_browser_token_server.json
 ```
 
-## Build Docker Container
+## 4.) Build Docker Container
 
 ```
 sudo docker build -t spotify-browser-token-server .
 ```
 
-## Run Docker Container
+## 5.) Run Docker Container
 
 ```
 sudo docker run -dit --restart='always' \
@@ -39,7 +39,7 @@ sudo docker run -dit --restart='always' \
 spotify-browser-token-server
 ```
 
-## Refresh Token
+## 6.) Refresh Token
 
 ```
 curl http://127.0.0.1:9898/refresh
