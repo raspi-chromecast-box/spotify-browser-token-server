@@ -8,14 +8,16 @@
 ```
 ```
 {
-    "express": {
-        "host": 127.0.0.1 ,
-        "port": 9898
-    } ,
-    "spotify": {
-        "username": "" ,
-        "password": ""
-    }
+	"config": {
+		"express": {
+			"host": "127.0.0.1" ,
+			"port": 9898
+		}
+	} ,
+	"spotify": {
+		"username": "" ,
+		"password": ""
+	}
 }
 ```
 ```
