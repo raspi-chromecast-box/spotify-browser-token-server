@@ -1,6 +1,6 @@
 # Spotify Browser Token Server
 
-## Spotify seems to 'know' via thie reCAPTCHA service, if you try to login via Docker , so just generate cookies
+## Spotify seems to 'know' via the reCAPTCHA service, if you try to login via Docker , so just generate cookies
 
 ## On Normal 'Non-Docker' Computer , Run
 
